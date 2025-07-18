@@ -10,6 +10,16 @@ version = '0.0.1-SNAPSHOT'
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
+        vendor = JvmVendorSpec.ADOPTIUM
+    }
+}
+
+toolchainManagement{
+    jvm{
+        javaRepositories {
+            repository("adoptium") {
+                uri = uri("https://api.adoptium.net/v3/binary/latest/{version}/ga/linux/x64/jdk/hotspot/normal/adoptium")
+            }
     }
 }
 
