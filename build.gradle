@@ -7,12 +7,7 @@ plugins {
 group = 'gmail.garamyu322'
 version = '0.0.1-SNAPSHOT'
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-        vendor = JvmVendorSpec.ADOPTIUM
-    }
-}
+// java toolchain block removed to use system default JDK
 
 configurations {
     compileOnly {
